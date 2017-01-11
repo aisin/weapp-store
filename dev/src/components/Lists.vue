@@ -2,16 +2,16 @@
   <div class="app-lists">
     <div class="container">
       <div class="row">
-        <div v-for="(item, index) in appList" @mouseover="showQR(index, $event)" @mouseleave="hideQR(index, $event)" class="app-item">
+        <div v-for="(item, index) in appList" @mouseover="showQR(index, $event)" @mouseleave="hideQR(index, $event)" class="app-item col-sm-6 col-md-4 col-lg-3">
           <div class="con">
             <div class="logo">
               <img :src="imgUrl(item.logoUrl)" alt="">
             </div>
             <div class="detail">
               <div class="name">{{ item.name }}</div>
-              <div class="cat">类别：{{ item.tags[0] }}</div>
-              <div class="intro">简介：{{ item.sum }}</div>
-              <div class="author">发布：{{ item.author }}</div>
+              <div class="cat"><span>类别：</span>{{ item.tags[0] }}</div>
+              <div class="intro"><span>简介：</span>{{ item.sum }}</div>
+              <div class="author"><span>发布：</span>{{ item.author }}</div>
             </div>
             <div class="qr-con">
               <div class="qr">
@@ -65,13 +65,8 @@ export default {
 .app-lists{
   margin-top: 10px;
 }
-.app-lists .row{
-  display: flex;
-  flex-wrap: wrap;
-}
 .app-item{
   padding: 8px;
-  width: 33.333%;
   position: relative;
 }
 .app-item .con{
@@ -80,6 +75,8 @@ export default {
   border-radius: 4px;
   padding: 8px;
   position: relative;
+  height: 130px;
+  overflow: hidden;
 }
 .app-item .logo img{
   width: 60px;
@@ -87,10 +84,13 @@ export default {
   border-radius: 4px;
 }
 .app-item .detail{
-  font-size: 14px;
-  color: #999;
-  line-height: 1.5em;
+  font-size: 12px;
+  color: #bababa;
+  line-height: 1.6em;
   padding-left: 8px;
+}
+.app-item .detail span{
+  color: #888;
 }
 .app-item .detail .name{
   margin-bottom: 6px;

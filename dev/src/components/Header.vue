@@ -5,7 +5,7 @@
         <div class="col-xs-12">
           <h1>小程序应用商店</h1>
           <div class="desc">聚合最新、最实用的微信小程序<br><span class="hide">共收录了 xxx 个小程序</span></div>
-          <form class="" role="search">
+          <form class="hide" role="search">
             <div class="form-group">
               <input type="text" class="form-control search clearable" placeholder="搜索小程序，例如：腾讯视频">
               <i class="fa fa-search"></i>
